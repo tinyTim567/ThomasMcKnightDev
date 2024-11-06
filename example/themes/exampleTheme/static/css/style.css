@@ -149,6 +149,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: Noto Sans Mono, monospace;
     color: var(--md-sys-color-primary);
+    margin: 0;
 }
 
 h1 {
@@ -175,10 +176,26 @@ h6 {
     font-size: medium;
 }
 
+blockquote {
+    border-left: 2px solid var(--md-sys-color-on-surface);
+    padding: 0.1rem 1rem;
+}
+
+code {
+    padding: 0;
+    margin: 0;
+    font-family: Noto Sans Mono, monospace;
+    font-size: smaller;
+    background-color: var(--md-sys-color-surface-container);
+}
+
 .main {
     background-color: var(--md-sys-color-surface-bright);
     margin: 5rem;
+    padding: 2rem;
     border-radius: 1rem;
+    min-width: 60%;
+    text-align: left;
 }
 
 .article {
@@ -213,9 +230,15 @@ h6 {
     }
 }
 
+.subtitle {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
 hr {
-    color: var(--md-sys-color-outline);
     margin: 0.5rem;
+    color: var(--md-sys-color-outline);
 }
 
 .tag {
@@ -242,4 +265,8 @@ hr {
 
     background-color: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
+}
+
+a{
+    color: var(--md-sys-color-on-surface);
 }
