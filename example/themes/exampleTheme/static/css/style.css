@@ -55,6 +55,7 @@ body {
     padding: 0;
     font-family: noto, sans-serif;
     text-rendering: optimizeLegibility;
+    font-size: medium;
 
     background-color: var(--md-sys-color-background);
     color: var(--md-sys-color-on-background);
@@ -83,6 +84,7 @@ body {
     color: var(--md-sys-color-on-surface);
 
     .nav-link {
+        font-family: Noto Sans Mono, monospace;
         color: inherit;
         padding: 0.5rem;
         margin: 0.5rem;
@@ -145,7 +147,7 @@ body {
 /*  */
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: noto, serif;
+    font-family: Noto Sans Mono, monospace;
     color: var(--md-sys-color-primary);
 }
 
@@ -173,7 +175,71 @@ h6 {
     font-size: medium;
 }
 
+.main {
+    background-color: var(--md-sys-color-surface-bright);
+    margin: 5rem;
+    border-radius: 1rem;
+}
 
+.article {
+    display: flex;
+    margin: 1rem;
+    max-width: 1200px;
+}
 
+.article-content {
+    flex: 1 auto;
+    max-width: 70%;
+}
 
+.article-meta {
+    width: auto;
+    margin-top: 1rem;
 
+    .decoration {
+        display: flex;
+        flex-flow: row wrap;
+        overflow: hidden;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+
+        height: 64px;
+    }
+
+    .metadata {
+        margin: 1rem 0.5rem;
+        text-align: left;
+    }
+}
+
+hr {
+    color: var(--md-sys-color-outline);
+    margin: 0.5rem;
+}
+
+.tag {
+    background-color: var(--md-sys-color-secondary);
+    color: var(--md-sys-color-on-secondary);
+
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+.primary-text {
+    color: var(--md-sys-color-primary);
+}
+
+.button-primary {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    width: fit-content;
+
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}

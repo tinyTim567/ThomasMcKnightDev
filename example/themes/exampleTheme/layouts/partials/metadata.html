@@ -1,9 +1,34 @@
-{{ $dateTime := .PublishDate.Format "2006-01-02" }}
-{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-<time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
-{{ with .Params.tags }}
-{{ range . }}
-{{ $href := print (absURL "tags/") (urlize .) }}
-<a href="{{ $href }}">{{ . }}</a>
-{{ end }}
+<div>
+    {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+    {{ $dateFormat := .Site.Params.dateFormat | default "00:00:00 January 2, 2006" }}
+    <p>
+        <span class="primary-text">Published:</span>
+        <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+    </p>
+    <p>
+        <span class="primary-text">Last Updated:</span>
+        <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+    </p>
+
+</div>
+
+<br>
+
+<div>
+    {{ with .Params.tags }}
+    {{ range . }}
+    {{ $href := print (absURL "tags/") (urlize .) }}
+    <a class="tag" href="{{ $href }}">{{ . }}</a>
+    {{ end }}
+</div>
+
+<br>
+
+<!--
+<a href="" class="button-primary">
+    <span class="material-symbols-outlined">share</span>
+    <span>Share</span>
+</a>
+-->
+
 {{ end }}
