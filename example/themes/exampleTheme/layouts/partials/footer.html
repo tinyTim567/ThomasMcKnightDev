@@ -1,0 +1,11 @@
+<footer class="footer">
+    <div class="decoration">
+        {{- partial "decoration.html" . -}}
+    </div>
+
+    <div class="footer-text">
+        <a class="copyright" href="">Copyright © {{ now.Format "2006"}} Thomas McKnight</a>
+        {{- partial "socials.html" . -}}
+    </div>
+</footer>
+
