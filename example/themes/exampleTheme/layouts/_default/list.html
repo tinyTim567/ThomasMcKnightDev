@@ -2,7 +2,7 @@
 <main class="main">
     <h1>{{ .Title }}</h1>
     {{ range .Pages.ByPublishDate.Reverse }}
-    <h2><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     {{ end }}
 </main>
 {{ end }}
